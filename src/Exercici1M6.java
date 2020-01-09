@@ -35,6 +35,11 @@ public class Exercici1M6 {
 					 System.out.println("Grandaria      : "+f.length());
 					 System.out.println("Es un directori: "+f.isDirectory());
 					 System.out.println("Es un fitxer   : "+f.isFile());
+					 System.out.println("Darrera data de modificacio : " + f.lastModified());
+					 
+					 if(f.lastModified() <= 3){
+						 System.out.println("Modificat en els darrers 3 dies");
+					 }
 				 }
 			 }
 		 }	  	 
