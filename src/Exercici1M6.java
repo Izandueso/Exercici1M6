@@ -16,11 +16,17 @@ public class Exercici1M6 {
 				 System.out.println("Fitxers al directori actual: ");
 				 String[] arxius = f.list();
 				 for (int i = 0; i<arxius.length; i++){
+					 if (f.isHidden()){
+						 System.out.println("Esta ocult: " + arxius[i]);
+					 }
 					 System.out.println(arxius[i]);
 				 }
 			 }else if(f.isFile()){
 				 System.out.println("INFORMACIÓ SOBRE EL FITXER");
 				 if(f.exists()){
+					 if (f.isHidden()){
+						 System.out.println("Ocult: " + f.getName());
+					 }
 					 System.out.println("Nom del fitxer : "+f.getName());
 					 System.out.println("Ruta           : "+f.getPath());
 					 System.out.println("Ruta absoluta  : "+f.getAbsolutePath());
@@ -31,8 +37,6 @@ public class Exercici1M6 {
 					 System.out.println("Es un fitxer   : "+f.isFile());
 				 }
 			 }
-		 }
-		  	 
+		 }	  	 
 	 }
-
 }
