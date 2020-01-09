@@ -7,9 +7,9 @@ public class Exercici1M6 {
 		 Scanner teclado = new Scanner(System.in);
 		 
 		 System.out.println("Introdueix el directori o fitxer que vols consultar:");
+		  
 		 String fichero = teclado.nextLine();
 		 File f = new File(fichero);
-		 Scanner scan = new Scanner(f);
 		 
 		 if (f.exists()){
 			 if(f.isDirectory()){
